@@ -8,7 +8,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "\033[0m\033[01;37m(1) \033[01;33mToken padrão\033[0m"
 echo -e "\033[0m\033[01;37m(2) \033[01;33mTestar Token personalizado \033[0m"
 
-echo -e "\033[0m\033[01;37m(3) \033[01;33m JOKER PO DE NET \033[0m"
+echo -e "\033[0m\033[01;37m(3) \033[01;33mPedra Papel Tesoura\033[0m"
 
 
 echo -e "\033[0m\033[01;37m(4) \033[01;33mSair\033[0m"
