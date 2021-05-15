@@ -1,0 +1,299 @@
+#!/bin/bash
+clear
+echo -e "\033[01;32m Instalando ferramentas necessarias!\033[01;37m"
+sleep 1
+pkg install pv -y -qq --silent
+sleep 1
+pkg install cmatrix -y -qq --silent
+sleep 1
+pkg install jq -y -qq --silent
+sleep 1
+pkg install git -y -qq --silent
+clear
+echo ""
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[41;1;37m            • PACOTE FREE •             \E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "    \033[0m\033[01;37m• \033[01;33mToken padrão \033[0m\033[01;37m•\033[0m"
+echo -e "\033[01;32m Aprovado \033[0m\033[0m\033[01;37m= Recebera os MB"
+echo -e "\033[01;31m Reprovado \033[0m\033[0m\033[01;37m= Não recebera os MB"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 1
+echo -e "\033[01;33m Total de Tokens:\033[0m \033[0m\033[01;37m18 "
+echo ""
+echo -e "\033[01;32m Insira seu 55+DDD+NÚMERO:\033[01;37m"
+read NUMERO
+echo -e "\033[01;32m Testar quantas vezes cada Token?\033[1;37m"
+read VEZES
+echo -e "\033[01;32m Iniciando Teste 1 a 18\033[1;37m"
+sleep 1
+echo ""
+
+echo -e "\e[0m\e[01;37;41m TOKEN 1 - 5MB \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=02f76cd1-eead-44ff-88dd-aa69538c7aef&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 2 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=949e575a-6db8-4608-8b71-1281e6e506df&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 3 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=04e564c7-f410-49f5-8dee-b268eaef5223&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 4 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=4919b47c-f588-4e71-87e3-639b3af92e4d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 5 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=3e0a2f54-101a-427a-999e-2ede723c3b42&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 6 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=03bc4539-13db-4045-9119-a937eb48d41d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 7 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=cd5f56de-4ed9-484f-9c32-c8f6eedb08e7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 8 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=7398de8b-48fa-48eb-9a59-562b2a0fba3e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 9 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=04e564c7-f410-49f5-8dee-b268eaef5223&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 10 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=b276dbcf-f384-499c-b492-741943071b76&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 11 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=02f76cd1-eead-44ff-88dd-aa69538c7aef&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 12 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=23a6eb53-cf15-4354-a357-b497de3bcc1e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 13 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=7c732700-bfac-40bf-9805-e5a3ab5d872d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 14 100MB\e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=91e22bd5-7b79-4fef-8dfa-c40f1ff3736b&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 15 100MB\e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=e2b803f3-6992-472d-b4d1-663f5c9c41d7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 16 100MB\e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=9576e551-97a1-4744-aded-5c8368182306&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 17 100MB\e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=19313963-7198-4a33-9511-1c72c7d6152a&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 18 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=288b9ca4-b405-4d2a-b7a5-53aff22118a9&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mReprovado - \e[0m \e[01;37mFinalizando...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "ALGO DEU ERRADO"
+esac
+done
+echo ""
+echo -e "        \033[0m\033[01;37m• \033[01;32mTeste finalizado \033[01;37m•\033[0m"
+sleep 2
+curl -sO https://raw.githubusercontent.com/fabricio94b/PacoteFree/main/mbsfree && chmod 777 mbsfree && ./mbsfree
