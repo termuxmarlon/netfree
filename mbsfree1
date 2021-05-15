@@ -284,7 +284,26 @@ echo
 
 
 
-echo -e "\e[0m\e[01;37;41m TOKEN 18 100MB\e[0m"
+echo -e "\e[0m\e[01;37;41m TOKEN 18 - 5MB \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=932c6b83-4f49-489c-a0c9-0873f7801574&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+case $body in
+null) echo -e "\e[01;33mReprovado"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mAprovado\e[0m \e[01;37mTeste: $i\e[0m"|pv -qL 18;;
+*) echo "Erro"
+esac
+done
+echo
+
+
+
+
+
+
+echo -e "\e[0m\e[01;37;41m TOKEN 19 100MB\e[0m"
 for i in $(seq $VEZES);
 do
 response=$(data=$"msisdn=$NUMERO&campid=19313963-7198-4a33-9511-1c72c7d6152a&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
