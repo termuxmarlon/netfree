@@ -1,3 +1,4 @@
+
 #!/bin/bash
 cd $HOME
 clear
@@ -10,8 +11,10 @@ echo -e "\033[0m\033[01;37m(2) \033[01;33mTestar Token personalizado \033[0m"
 
 echo -e "\033[0m\033[01;37m(3) \033[01;33m JOKER PO DE NET \033[0m"
 
+echo -e "\033[0m\033[01;37m(4) \033[01;33m MBSFREE MENTALISTA \033[0m"
 
-echo -e "\033[0m\033[01;37m(4) \033[01;33mSair\033[0m"
+
+echo -e "\033[0m\033[01;37m(5) \033[01;33mSair\033[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo " "
 echo -e "\033[1;32m O QUE DESEJA FAZER \033[1;33m?\033[1;31m?\033[1;37m : "
@@ -27,10 +30,27 @@ case $OPTION in
         (3)  
        curl -sO https://raw.githubusercontent.com/termuxmarlon/netfree/main/ganharcreditos && chmod 777 ganharcreditos && ./ganharcreditos
 ;;
-        (4)
+
+
+    (4)
+     curl -sO https://raw.githubusercontent.com/termuxmarlon/netfree/main/mbsfree12 && chmod 777 mbsfree12 && ./mbsfree12
+;;
+    
+
+    (5)
         clear
         exit;
         ;;
         (*) echo -e "\033[1;31mOpção invalida\033[1;37m"
 
    esac
+
+
+
+
+ 
+
+
+
+
+
